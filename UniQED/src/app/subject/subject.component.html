@@ -1,0 +1,10 @@
+<div class="spac">
+<div *ngFor="let chapter of data" class="card">
+    <h5 class="card-header">{{chapter.chapterName}}</h5>
+    <div *ngFor="let topic of chapter.topic" class="card-body">
+      <h5 class="card-title">{{topic.topicName}}</h5>
+     
+      <a *ngFor="let link of topic.Link"href="{{link.url}}" class="">{{link.url}}</a>
+    </div>
+
+    </div>

@@ -1,0 +1,119 @@
+<div class="navigation">
+   <img class="brand-img" src="../../assets/images/logo.png">
+   <div class='center toggle'type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+      <div><i class="fa fa-user-circle  user-icon"></i></div>
+       <div class="admin-name" >Super Admin</div> 
+       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    
+    </div>
+
+</div>
+
+<div class="center vertical-margin">
+    <h2>Registration</h2>
+</div>
+
+<div class="body vertical-margin">
+<form [formGroup]="form" (ngSubmit)="register()">
+<div class="row">
+    
+    <div class="col-lg-6 col-md-6 col-sm-10 space">
+        
+        <div class="form-group">
+            <input   formControlName="name" class="input-class" placeholder="Enter Full Name">
+        </div>
+    
+        <div class="form-group">
+            <input formControlName="email" class="input-class" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+            <input formControlName="password" class="input-class" placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+            <input  class="input-class" placeholder="Confirm Password">
+        </div>
+     
+    
+</div>
+    <div class="col-lg-6 col-md-6 col-sm-10 space">
+        <div class="form-group">
+            <input formControlName="mobileNo" class="input-class" placeholder="Enter Mobile Number">
+        </div>
+       
+        <div class="from-group select-margin">
+            
+         <select formControlName="stakeholder"   class=" cs-dropdown"  (change)="stk_change($event)">
+            <option value="" disabled selected>Stakeholders</option>
+             <option value="financial Institution">Financial Institution</option>
+             <option vlaue="insurance">Insurers</option>
+         </select>
+
+        </div>
+
+        <div  class="from-group select-margin">
+            
+            <select *ngIf="FI==null"   formControlName="stakeholderName" class=" cs-dropdown">
+                
+               <option value="" disabled selected>Stakehlder's Name</option>
+                <option value="financial Institution">Financial Institution</option>
+                <option vlaue="insurance">Insurers</option>
+            </select>
+
+            <select *ngIf="FI=='financial Institution'" formControlName="stakeholderName" class=" cs-dropdown">
+                
+                <option value="" disabled selected>{{financialInstitution}}</option>
+                 <option *ngFor="let nm of fiNames" value="nm.name">{{nm.name}}</option>
+             </select>
+
+             <select *ngIf="FI=='Insurers'" formControlName="stakeholderName" class=" cs-dropdown">
+                
+                <option value="" disabled selected>{{insurers}}</option>
+                 <option *ngFor="let nm of inNames" value="na.name">{{nm.name}}</option>
+             </select>
+
+           </div>
+
+        
+
+        <div class="from-group select-margin">
+            
+            <select formControlName="role" class=" cs-dropdown" (change)="role_change($event)">
+               <option value="" disabled selected>Role</option>
+                <option value="Managerial">Managerial</option>
+                <option vlaue="Staff">Staff</option>
+            </select>
+           </div>
+
+
+           <div class=" select-margin from-group">
+            
+            <select *ngIf="Role==null" formControlName="permissionLevel" class="cs-dropdown">
+               <option value="" disabled selected>permission Level</option>
+                <option value="create read update delete">Create ,view and update</option>
+                <option vlaue="read update">View and Update</option>
+            </select>
+
+            <select *ngIf="Role=='Managerial'" formControlName="permissionLevel" class="cs-dropdown">
+                <option value="" disabled selected>permission Level</option>
+                 <option value="create read update delete">Read write access</option>
+             </select>
+
+             <select *ngIf="Role=='Staff'" formControlName="permissionLevel" class="cs-dropdown">
+                <option value="" disabled selected>permission Level</option>
+                 <option value="read update">Read only access</option>
+             </select>
+           </div>
+
+           <div class="form-group">
+            <button  type="submit" class=" login-btn">Submit</button>
+        </div>
+    </div>
+    
+
+</div>
+</form>
+</div>

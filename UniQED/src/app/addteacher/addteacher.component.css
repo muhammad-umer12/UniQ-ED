@@ -1,0 +1,139 @@
+.navigation{
+    padding: 0px 25px;
+}
+.brand-img{
+    height:120px;
+    max-width: 150px;
+}
+.center{
+    text-align: center;
+}
+.vertical-margin{
+    margin-top:20px;
+}
+.navigation{
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 5px 10px 18px #888888;
+}
+.user-icon{
+    font-size: 45px;
+    margin-top: 20px;
+}
+.login-btn{
+    padding:4px 30px;
+    background-color: #F55733;
+    color:white;
+    font-weight: 500;
+    border:2px solid black;
+    border-bottom: 4px solid black; ;
+    outline: none;
+    margin-top: 15px;
+    width:20rem;
+}
+.login-btn:hover{
+    background-color: #F55710;
+}
+.space{
+    padding:20px 20px;
+}
+.body{
+    margin:30px 10%;
+}
+.back{
+    font-size: 40px;
+    margin-bottom: 30px;
+    decoration:none;
+    color:#F55733;
+}
+.num{
+    width:45px;
+    margin-left: 20px;
+    outline: #F55733 ;
+}
+.input-class{
+    width:20rem;
+    border-left:none;
+    border-top:none;
+    border-right: none;
+    border-bottom: 2px solid #F55733;
+    outline: none;
+}
+.select-margin{
+    margin-top:13px;
+}
+.cs-dropdown{
+    width:20rem;
+    background-color: #fff;
+    border-radius:5px ;
+    height:35px;
+    border: 2px solid #F55733;
+    text-align: left;
+    color:#959595;
+    outline:none;
+}
+.dropdown-toggle-split{
+    color:#F55733;
+}
+.cs-dropdown-ar{
+    background-color: #fff;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius:5px ;
+    border: 2px solid #F55733;
+    outline:none;
+}
+.error{
+    color:red;
+}
+.input-class:hover{
+    border-bottom: 3px solid #F55733;
+}
+.success{
+    color:green;
+}
+.disable{
+    cursor: not-allowed;
+    pointer-events: all !important;
+    }
+.login-btn>button:enabled{
+    cursor: pointer;
+}
+.login-btn > button:disabled{
+    
+    pointer-events: all !important;
+    cursor: no-drop;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width:20rem;
+    border-left:none;
+    border-top:none;
+    border-right: none;
+    border-bottom: 2px solid #F55733;
+    outline: none;
+    cursor: pointer;
+    color:grey;
+}
+.flt{
+    float:right;
+    color:black;
+    font-size: 20px;
+}
+@media(max-width : 500px){
+    .input-class{
+        width:90%;
+    }
+    .custom-file-upload {
+        width:90%;
+    }
+    .login-btn{
+        width:80%;
+    }
+    .cs-dropdown{
+        width:80%;
+    }
+}

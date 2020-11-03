@@ -1,0 +1,121 @@
+<a class="back" routerLink="/dashboard/Veterinary"><i class=" fa fa-arrow-circle-left"></i></a>
+
+
+<div class="center vertical-margin">
+    <h2>Borrower Registration</h2>
+</div>
+<div class="body vertical-margin">
+<form [formGroup]="form" (ngSubmit)="register()"  enctype="multipart/form-data">
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-10 space">
+        <div class="form-group">
+            <input   formControlName="name" class="input-class" placeholder="Enter Full Name">
+            <div class="error" *ngIf="regForm.name.dirty && regForm.name.invalid">
+                <div *ngIf="regForm.name.errors?.required"><span class="fa fa-times"></span>  Name field is required</div>
+                <div *ngIf="regForm.name.errors?.maxlength"><span class="fa fa-times"></span>  Name must not be more thn 20 character</div>
+                <div *ngIf="regForm.name.errors?.pattern"><span class="fa fa-times"></span>  Name must not contain any number</div>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <input  type="text" formControlName="address" class="input-class"  placeholder="Address">
+            <div class="error" *ngIf="regForm.address.dirty && regForm.address.invalid">
+               <div *ngIf="regForm.address.errors?.required"><span class="fa fa-times"></span>Address is required</div>
+               
+           </div>
+        </div>
+
+
+        <div class="form-group">
+            <input  type="text" formControlName="cnic" class="input-class"  placeholder="Enter CNIC NO.   XXXXX-XXXXXXX-X">
+            <div class="error" *ngIf="regForm.cnic.dirty && regForm.cnic.invalid">
+               <div *ngIf="regForm.cnic.errors?.required"><span class="fa fa-times"></span>CNIC number is required</div>
+               <div *ngIf="regForm.cnic.errors?.pattern"><span class="fa fa-times"></span>Invalid format</div>
+           </div>
+        </div>
+
+        
+        
+
+
+        <div class="form-group">
+           <input formControlName="mobileNo" class="input-class" placeholder="Enter Mobile Number (03-21-1234567)">
+           <div class="error" *ngIf="regForm.mobileNo.dirty && regForm.mobileNo.invalid">
+              <div *ngIf="regForm.mobileNo.errors?.required"><span class="fa fa-times"></span>  Contact number  required</div>
+              
+            
+          </div>
+
+       </div>
+
+       <div class="form-group">
+        <input formControlName="subject" class="input-class" placeholder="Enter Your Subject">
+        <div class="error" *ngIf="regForm.subject.touched && regForm.subject.invalid">
+           <div *ngIf="regForm.subject.errors?.required"><span class="fa fa-times"></span>  Subject information  required</div>
+           
+     
+       </div>
+
+    </div>
+
+    <div class="form-group">
+        <input formControlName="city" class="input-class" placeholder="Enter Your City">
+        <div class="error" *ngIf="regForm.city.touched && regForm.city.invalid">
+           <div *ngIf="regForm.city.errors?.required"><span class="fa fa-times"></span>Please enter your city</div>
+           
+     
+       </div>
+
+    </div>
+
+    <div class="form-group">
+        <input formControlName="description" class="input-class" placeholder="Enter Description">
+        <div class="error" *ngIf="regForm.description.touched && regForm.city.invalid">
+           <div *ngIf="regForm.description.errors?.required"><span class="fa fa-times"></span>Please enter some description </div>
+           
+     
+       </div>
+
+    </div>
+
+
+
+
+      
+
+      
+
+
+  
+</div>
+  
+    
+        
+       
+
+
+       
+
+            <div class="form-group">
+                <label for="file-upload" >
+                    Upload Image <i class="fa fa-upload flt"></i>
+                </label>  
+                <input  accept="image/*"  (change)="uploadFile($event)"  type="file"/> 
+            </div>
+
+
+      
+           
+          
+           <div class="form-group">
+            <button  [disabled]="form.invalid" [ngClass]="{'disable': form.invalid == true}" type="submit" class=" login-btn">Submit</button>
+           </div>
+
+
+          
+
+           
+    
+</div>
+</form>
+</div>

@@ -1,0 +1,87 @@
+.login-btn{
+    padding:4px 20px;
+    background-color: #F55733;
+    color:white;
+    font-size: 14px;
+    border:2px solid black;
+    border-bottom: 4px solid black; ;
+    outline: none;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    
+    
+}
+
+.cs-dropdown{
+    padding:0px 15px;
+    background-color: #fff;
+    border-radius:5px ;
+    height:35px;
+    border: 2px solid #F55733;
+    text-align: left;
+    color:#959595;
+    outline:none;
+    font-size: 14px;
+}
+
+.log-search{
+    position: relative;
+    margin-bottom: 20px;
+    padding:5px 0px;
+}
+.generate{
+    color:black;
+    position: absolute;
+    top:-15px;
+    text-align: center;
+}
+.login-btn{
+    padding:5px 5px;
+    background-color: #F55733;
+    color:white;
+    font-weight: 400;
+    border:2px solid black;
+    border-bottom: 4px solid black; ;
+    outline: none;
+    text-align: center;
+   
+}
+.login-btn:hover{
+ 
+    
+}
+.generate a{
+    text-decoration: none;
+    color:black;
+}
+.generate a:hover{
+    text-decoration: none;
+    font-weight: 500;
+    color:black;
+}
+
+.fnt{
+    color:#F55733;
+    font-size: 30px;
+}
+
+
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+
+.h1{
+    text-align: center;
+}
+
